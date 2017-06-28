@@ -2,6 +2,10 @@
 
 PySAIS is a wrapper to [Yuta Mori's](https://sites.google.com/site/yuta256/sais) implementation of the induced sorting algorithm to create suffix arrays. Both 32 bit and 64 bit indices are supported and automatically recognised.
 
+## License ##
+MIT - same as the original implementation, as this is just a wrapper.
+
+
 ## Requirements ##
 Cython and numpy. 
 
