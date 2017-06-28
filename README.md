@@ -46,7 +46,7 @@ test2
 ```
 
 ## License ##
-MIT - same as the original implementation, as this is just a wrapper.
+MIT - same as the original implementation, as this is just a wrapper. All files which originate from sais-lite retain their copyright notice, as follows.
 
 sais-lite license:
 ```
