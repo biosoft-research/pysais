@@ -26,10 +26,18 @@ extensions = [Extension('PySAIS._sais32',
 
 setup(
     name='PySAIS',
-    version='1.0.1',
+    version='1.0.2',
     ext_modules=cythonize(extensions, include_path=[np.get_include()]),
     include_dirs=[np.get_include()],
     packages=find_packages(),
     install_requires=['Cython', 'numpy'],
-    license='MIT'  # Wrapped library is under MIT license.
+    description='Suffix array computation with induced sorting algorithm.',
+    long_description='PySAIS is a wrapper to Yuta Mori\'s implementation of '
+                     'the induced sorting algorithm to create suffix arrays. '
+                     'Both 32 bit and 64 bit indices are supported and '
+                     'automatically recognised.\n'
+                     'Please raise issues on the tracker on bitbucket: '
+                     'https://bitbucket.org/alex-warwickvesztrocy/pysais',
+    license='MIT',  # Wrapped library is under MIT license.
+    url='https://bitbucket.org/alex-warwickvesztrocy/pysais'
 )
