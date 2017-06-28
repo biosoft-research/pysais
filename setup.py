@@ -16,11 +16,11 @@ compile_args = ['-O3', '-fomit-frame-pointer']
 if glibc_fix:
     compile_args.append('-DGLIBC_FIX')
 
-extensions = [Extension('sais._sais32',
-                        sources=['sais/_sais32.pyx', 'sais/sais32.c'],
+extensions = [Extension('PySAIS._sais32',
+                        sources=['PySAIS/_sais32.pyx', 'PySAIS/sais32.c'],
                         extra_compile_args=compile_args),
-              Extension('sais._sais64',
-                        sources=['sais/_sais64.pyx', 'sais/sais64.c'],
+              Extension('PySAIS._sais64',
+                        sources=['PySAIS/_sais64.pyx', 'PySAIS/sais64.c'],
                         extra_compile_args=compile_args)]
 
 
