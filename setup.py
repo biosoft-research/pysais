@@ -1,4 +1,5 @@
 from setuptools import setup, find_packages, Extension
+import os
 try:
     from Cython.Build import cythonize
 except:
@@ -10,7 +11,10 @@ except:
     print('numpy is required to install PySAIS')
     raise
 
-glibc_fix = False
+# Pick up a flag for the GLIBC fix.
+glibc_fix = (False if 'GLIBC_FIX' not in os.environ else
+             os.environ['GLIBC_FIX'] in
+             {'Y', 'YES', 'y', 'yes', 'Yes', 'True', 'true', '1'})
 
 compile_args = ['-O3', '-fomit-frame-pointer']
 if glibc_fix:
@@ -26,7 +30,7 @@ extensions = [Extension('PySAIS._sais32',
 
 setup(
     name='PySAIS',
-    version='1.0.2',
+    version='1.0.4',
     ext_modules=cythonize(extensions, include_path=[np.get_include()]),
     include_dirs=[np.get_include()],
     packages=find_packages(),
@@ -35,7 +39,10 @@ setup(
     long_description='PySAIS is a wrapper to Yuta Mori\'s implementation of '
                      'the induced sorting algorithm to create suffix arrays. '
                      'Both 32 bit and 64 bit indices are supported and '
-                     'automatically recognised.\n'
+                     'automatically recognised.\n\n'
+                     'If you encounter a GLIBC_2.14 not found error, try '
+                     're-installing with the environment variable GLIBC_FIX=1 '
+                     'set.\n\n'
                      'Please raise issues on the tracker on bitbucket: '
                      'https://bitbucket.org/alex-warwickvesztrocy/pysais',
     license='MIT',  # Wrapped library is under MIT license.
