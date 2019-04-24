@@ -1,9 +1,11 @@
 #!/usr/bin/env python
-from PySAIS._sais32 import sais as sais_32
-from PySAIS._sais64 import sais as sais_64
 from tables.earray import EArray
 from tables.array import Array
 import numpy as np
+
+
+from ._sais32 import sais as sais_32
+from ._sais64 import sais as sais_64
 
 
 def sais(s, reduce_size=True, encoding='ascii'):

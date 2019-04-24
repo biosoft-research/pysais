@@ -30,11 +30,11 @@ extensions = [Extension('PySAIS._sais32',
 
 setup(
     name='PySAIS',
-    version='1.0.6',
+    version='1.0.7',
     ext_modules=cythonize(extensions, include_path=[np.get_include()]),
     include_dirs=[np.get_include()],
     packages=find_packages(),
-    install_requires=['Cython', 'numpy'],
+    install_requires=['Cython', 'numpy', 'tables'],
     description='Suffix array computation with induced sorting algorithm.',
     long_description='PySAIS is a wrapper to Yuta Mori\'s implementation of '
                      'the induced sorting algorithm to create suffix arrays. '

@@ -1,1 +1,1 @@
-from PySAIS._sais import sais
+from ._sais import sais
