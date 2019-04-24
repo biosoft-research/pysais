@@ -30,7 +30,7 @@ extensions = [Extension('PySAIS._sais32',
 
 setup(
     name='PySAIS',
-    version='1.0.4',
+    version='1.0.5',
     ext_modules=cythonize(extensions, include_path=[np.get_include()]),
     include_dirs=[np.get_include()],
     packages=find_packages(),
@@ -46,5 +46,7 @@ setup(
                      'Please raise issues on the tracker on bitbucket: '
                      'https://bitbucket.org/alex-warwickvesztrocy/pysais',
     license='MIT',  # Wrapped library is under MIT license.
-    url='https://bitbucket.org/alex-warwickvesztrocy/pysais'
+    url='https://bitbucket.org/alex-warwickvesztrocy/pysais',
+    author='Alex Warwick Vesztrocy',
+    author_email='alex@warwickvesztrocy.co.uk'
 )
