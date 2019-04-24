@@ -30,7 +30,7 @@ extensions = [Extension('PySAIS._sais32',
 
 setup(
     name='PySAIS',
-    version='1.0.5',
+    version='1.0.6',
     ext_modules=cythonize(extensions, include_path=[np.get_include()]),
     include_dirs=[np.get_include()],
     packages=find_packages(),
