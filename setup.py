@@ -22,15 +22,17 @@ if glibc_fix:
 
 extensions = [Extension('PySAIS._sais32',
                         sources=['PySAIS/_sais32.pyx', 'PySAIS/sais32.c'],
+                        include_dirs=[np.get_include()],
                         extra_compile_args=compile_args),
               Extension('PySAIS._sais64',
                         sources=['PySAIS/_sais64.pyx', 'PySAIS/sais64.c'],
+                        include_dirs=[np.get_include()],
                         extra_compile_args=compile_args)]
 
 
 setup(
     name='PySAIS',
-    version='1.0.7',
+    version='1.0.8',
     ext_modules=cythonize(extensions, include_path=[np.get_include()]),
     include_dirs=[np.get_include()],
     packages=find_packages(),
