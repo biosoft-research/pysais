@@ -9,8 +9,8 @@ from libc.string cimport const_uchar
 from tables.earray import EArray
 import numpy as np
 cimport numpy as np
-cimport python_unicode
-cimport stdlib
+#cimport python_unicode
+#cimport stdlib
 
 
 # Define the type for this SAIS
