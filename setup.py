@@ -61,8 +61,8 @@ setup(
                      'If you encounter a GLIBC_2.14 not found error, try '
                      're-installing with the environment variable GLIBC_FIX=1 '
                      'set.\n\n'
-                     'Please raise issues on the tracker on bitbucket: '
-                     'https://bitbucket.org/alex-warwickvesztrocy/pysais',
+                     'Please raise issues on the tracker on github: '
+                     'https://github.com/biosoft-research/pysais',
     license='MIT',  # Wrapped library is under MIT license.
     url='https://bitbucket.org/alex-warwickvesztrocy/pysais',
     author='Alex Warwick Vesztrocy',
